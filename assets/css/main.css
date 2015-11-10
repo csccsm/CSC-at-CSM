@@ -34,23 +34,55 @@
   position: relative;
 }
 
-/*Carousel test*/
+/*Carousel rules*/
+.slider-container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .carousel {
 	margin-bottom: 0;
 }
 
 .carousel-control {
-	/*left: -12px;*/
+	left: -12px;
 }
+
+.carousel-control.left {
+	left: -12px;
+	width: 80px;
+}
+
 .carousel-control.right {
-	/*right: -12px;*/
+	right: -12px;
+	width: 80px;
+}
+
+.carousel-caption {
+	top: 0px;
+}
+
+.slide-text {
+	position: absolute;
+	width: 500px;
+	left: 55%;
+	top: 20px;
+}
+
+.slide-text h1 {
+	text-align: center;
+}
+
+.indicators-position {
+	position: relative; 
+	width: 100px;
+	left: 85%;
+	bottom: -10px;
 }
 
 .carousel-indicators {
-	right: 50%;
 	top: auto;
 	bottom: 0px;
-	margin-right: -19px;
 }
 
 .carousel-indicators li {
@@ -58,5 +90,5 @@
 }
 
 .carousel-indicators .active {
-background: #333333;
+	background: #333333;
 }
