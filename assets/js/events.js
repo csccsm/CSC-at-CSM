@@ -21,3 +21,25 @@ $("#event-form").submit(function(event) {
       }
    });
 });
+
+function getEvents() {
+   var query = new Parse.Query(Events);
+   query.find({
+      success: function(event) {
+         var output = "";
+         for (var i in event) {
+            var title = event[i].get("title");
+            var description = event[i].get("description");
+            output += "<li>";
+            output += "<h3>"+title+"</h3>";
+            output += "<p>"+description+"</p>"
+            output += "</li>";
+         }
+         $("#list-events").html(output);
+      },
+      error: function(err) {
+         console.log("Error: " + err.message);
+      }
+   });
+}
+getEvents();
