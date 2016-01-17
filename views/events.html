@@ -2,20 +2,25 @@
 <html>
   <head>
 
-  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-  <script src="assets/js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <script src="assets/js/script.js"></script>
 
-  <!--    bootstrap    -->
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- Latest compiled JavaScript -->
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <!-- Connect to Parse -->
-  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+    <!--    bootstrap    -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Connect to Parse -->
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
 
-
+    <!-- Calendar to select dates -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/latest/css/bootstrap.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
   </head>
 
   <!-- ==================== end head ====================== -->
@@ -59,6 +64,19 @@
       <h1>Post new event</h1>
       <form id="event-form">
          <p><input id="event-title" type="text"></p>
+         <p><input id="event-date" name="date" type="text">
+           <script type="text/javascript">
+              $(function() {
+                  $('input[name="date"]').daterangepicker({
+                      singleDatePicker: true,
+                      showDropdowns: true
+                  }, 
+                  function(start, end, label) {
+                      var years = moment().diff(start, 'years');
+                  });
+              });
+           </script>
+          </p>
          <p><textarea id="event-description"></textarea></p>
          <p><input id="event-submit" type="submit"></p>
       </form>
