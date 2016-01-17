@@ -1,4 +1,4 @@
-Parse.initialize("XXXXXXXXXX", "XXXXXXXXXX");
+Parse.initialize();
 
 var Events = Parse.Object.extend("Events");
 
