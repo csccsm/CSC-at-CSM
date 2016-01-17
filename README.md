@@ -45,7 +45,7 @@ If you don't know what `Parse` is, http://parse.com/ explains who they are and w
   
 Once you have installed `Node.js`, here are the steps to getting the project onto your computer:
   1. Fork the project
-  2. `git clone` the `HTTP` link from your fork in your terminal/command prompt
+  2. `git clone` the `HTTPS` link from your fork in your terminal/command prompt
   3. Connect to the main `CSC-at-CSM` branch by running `git remote add upstream https://github.com/csccsm/CSC-at-CSM.git`
   4. `cd` into the project directory then run `npm install` to install all `Node.js` dependencies
   5. Once everything is installed, run `node server.js` to launch the server
