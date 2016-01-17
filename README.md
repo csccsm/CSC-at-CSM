@@ -18,7 +18,7 @@ If you haven't already, below are the instructions to install `Node.js`:
 
 If you don't know what `Parse` is, http://parse.com/ explains who they are and what they do.
   * To use `Parse`, you need the application and JavaScript keys which will not be given here. You must be part of the clubs `Slack` in order to obtain the keys
-  * Here is an example of how `Prase` is being used
+  * Here is an example of how `Parse` is being used
   ```javascript
   var Events = Parse.Object.extend("Events");
 
