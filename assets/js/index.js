@@ -9,6 +9,7 @@ function getEvents() {
          var output = "";
          for (var i in event) {
             var title = event[i].get("title");
+            var date = event[i].get("date");
             var description = event[i].get("description");
             output += "<li>";
             output += "<h3>"+title+ " "+"-"+" "+date+"</h3>";
