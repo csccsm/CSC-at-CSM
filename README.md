@@ -58,9 +58,9 @@ Once you have made changes, these are the steps to applying the changes to your 
       * `git add <filename>` will add a single file
       * `git add <folder-name>/<filename>` will add a single file if it is in a certain folder
       * `git add .` adds everything
-  2. Once you've added the file(s) changed, run `git commit -m 'Short message that explains the change you made'`
-  3. Run `git pull upstream master` to make sure that there are no conflicts
-  4. If there are no conflicts, run `git push origin master` to push the changes to your fork
+  2. Once you've added the file(s) that have been modified, you now need to commit your changes with: `git commit -m 'Short message that explains the change you made'`
+  3. `git pull upstream master` is a check to make sure that there are no conflicts. If there are, you need to fix them
+  4. If there are no conflicts, you can now push them to your fork using `git push origin master`
 
 Submitting a Pull Request:
   * Go to the Pull requests tab in your fork, then hit the New Pull Request button
