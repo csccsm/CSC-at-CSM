@@ -6,27 +6,27 @@ We are using Node.js for our sever infrastructure and MongoDB as our database. T
 
 If you haven't already, below are the instructions to install Node.js:
   * Mac OS X:
-    * Download the .pkg file from https://nodejs.org/en/download/. The file will be stored where you send your downloads to
-    * Go to the location of the .pkg file, open it and follow the instructions
+   * Download the .pkg file from https://nodejs.org/en/download/. The file will be stored where you send your downloads to
+   * Go to the location of the .pkg file, open it and follow the instructions
   
   * Windows: 
-    * http://blog.teamtreehouse.com/install-node-js-npm-windows
+   * http://blog.teamtreehouse.com/install-node-js-npm-windows
   
   * Linux (Ubuntu, Linux Mint, Debian, OpenSUSE, Fedora):
-    * https://nodejs.org/en/download/package-manager/
+   * https://nodejs.org/en/download/package-manager/
 
 MongoDB is a NoSQL database. A NoSQL (originally referring to "non SQL" or "non relational") database provides a mechanism for storage and retrieval of data which is modeled in means other than the tabular relations used in relational databases. You can read https://www.mongodb.com/nosql-explained to get an in-depth understanding of what NoSQL really is and how it works. Below are the instructions for installing MongoDB on your system:
  * Mac OS X:
-   * https://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/
+  * https://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/
  
  * Windows:
-   * https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/
+  * https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/
   
  * Linux:
-   * Ubuntu: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/ 
-   * Debian: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-debian/
-   * Red Hat/Fedora: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
-   * SUSE/OpenSUSE: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-suse/
+  * Ubuntu: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/ 
+  * Debian: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-debian/
+  * Red Hat/Fedora: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
+  * SUSE/OpenSUSE: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-suse/
 
 IMPORTANT FOR OSX AND LINUX USERS! NEVER RUN MONGODB AS ROOT (sudo). For most Linux distributions, the installation instructions tell you to run `sudo service mongod start` to start MongoDB and `sudo service mongod stop` to stop it. DO NOT do this. To avoid this, do the following:
  * Create a `/data/db` directory in your terminal: `sudo mkdir -p /data/db`
