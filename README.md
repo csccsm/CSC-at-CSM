@@ -2,9 +2,9 @@
 The Computer Science Club at the College of San Mateo website is a collaborative website built by the memebers of the club. It will contain our upcoming events and pictures of the events we've had, links to projects that we've created and worked on, and all the memebers of the club.
 
 # Getting Setup and Running The Project
-We are using `Node.js` for our sever infrastructure and `Parse` to store our data. These two running alongside each other allow us to not worry about setting up database logic with allowing us to configure our server to how we want it to run. 
+We are using Node.js for our sever infrastructure and MongoDB as our database. Together, they make it easy to setup our backend infrastructure.
 
-If you haven't already, below are the instructions to install `Node.js`:
+If you haven't already, below are the instructions to install Node.js:
   * Mac OS X:
     * Download the .pkg file from https://nodejs.org/en/download/. The file will be stored where you send your downloads to
     * Go to the location of the .pkg file, open it and follow the instructions
@@ -12,55 +12,51 @@ If you haven't already, below are the instructions to install `Node.js`:
   * Windows: 
     * http://blog.teamtreehouse.com/install-node-js-npm-windows
   
-  * Linux (Preferably Ubuntu 14.04/15.10, or Linux Mint 17.3):
-    * https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
-    * After installing, run `sudo apt-get update` for good measure
+  * Linux (Ubuntu, Linux Mint, Debian, OpenSUSE, Fedora):
+    * https://nodejs.org/en/download/package-manager/
 
-If you don't know what `Parse` is, http://parse.com/ explains who they are and what they do.
-  * To use `Parse`, you need the application and JavaScript keys which will not be given here. You must be part of the clubs `Slack` in order to obtain the keys
-  * Here is an example of how `Parse` is being used
-  ```javascript
-  var Events = Parse.Object.extend("Events");
+MongoDB is a NoSQL database. A NoSQL (originally referring to "non SQL" or "non relational") database provides a mechanism for storage and retrieval of data which is modeled in means other than the tabular relations used in relational databases. You can read https://www.mongodb.com/nosql-explained to get an in-depth understanding of what NoSQL really is and how it works. Below are the instructions for installing MongoDB on your system:
+ * Mac OS X:
+   * https://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/
+ 
+ * Windows:
+   * https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/
+  
+ * Linux:
+   * Ubuntu: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/ 
+   * Debian: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-debian/
+   * Red Hat/Fedora: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
+   * SUSE/OpenSUSE: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-suse/
 
-  $("#event-form").submit(function(event) {
-     var title = $("#event-title").val();
-     var description = $("#event-description").val();
-  
-     var newEvent = new Events();
-  
-     newEvent.set("title", title);
-     newEvent.set("description", description);
-  
-     newEvent.save({
-        success: function(suc) {
-           console.log("Success: " + suc.message);
-        },
-        error: function(err) {
-           console.log("Error: " + err.message)
-        }
-     });
-  });
-  ```
-  * Here is a getting started guide for the JavaScript SDK: https://parse.com/docs/js/guide
-  
-Once you have installed `Node.js`, here are the steps to getting the project onto your computer:
+IMPORTANT FOR OSX AND LINUX USERS! NEVER RUN MONGODB AS ROOT (sudo). For most Linux distributions, the installation instructions tell you to run `sudo service mongod start` to start MongoDB and `sudo service mongod stop` to stop it. DO NOT do this. To avoid this, do the following:
+ * Create a `/data/db` directory in your terminal: `sudo mkdir -p /data/db`
+ * Then run `sudo chmod 777 /data/db`
+ * Then run `mongod` to check if it worked
+
+Once you have installed Node.js and MongoDB installed, here are the steps to getting the project onto your computer:
   1. Fork the project
-  2. `git clone` the `HTTP` link from your fork in your terminal/command prompt
-  3. Connect to the main `CSC-at-CSM` branch using `git remote add upstream https://github.com/csccsm/CSC-at-CSM.git`
-  4. `cd` into the project directory then run `npm install` to install all `Node.js` dependencies
+  2. `git clone` the HTTPS link from your fork in your terminal/command prompt
+  3. Remotely connect to the main CSC-at-CSM repo using `git remote add upstream https://github.com/csccsm/CSC-at-CSM.git`
+  4. `cd` into the project directory then run `npm install` to install all dependencies
   5. Once everything is installed, run `node server.js` to launch the server
 
 # Contributing
-NOTE: When you make changes to the code, the server will not pick up those changes right away. To get the changes to work, you have to shutdown the server by hitting `ctrl + c` in the terminal/command prompt, then relaunch the server. Installing the `Node.js` package `nodemon` will allow you to make changes and not have to restart the server since this package knows when you make changes so it will restart for you. You can install `nodemon` by using the command `sudo npm install -g nodemon`.
+NOTE: When you make changes to the code, the server will not pick up those changes right away. To get the changes to work, you have to shutdown the server by hitting `ctrl + c` in the terminal/command prompt, then relaunch the server. Installing the Node.js package `nodemon` will allow you to make changes and not have to restart the server since this package knows when you make changes so it will restart for you. You can install `nodemon` by using the command `sudo npm install -g nodemon`.
+
+It is a good idea to create a separate branch if you are working on something specific. This easily allows for others to get an idea of the change you are trying to make and allows for less conflicts when trying to merge. Here are some tips for creating a new branch:
+ * Create a new branch: `git checkout -b branch-name`
+ * For bug, logic, etc. fixes, your branch name should be something like `fix/name-of-fix`
+ * For additions: `addition/name-of-addition` or `feature/name-of-featrue`
 
 Once you have made changes, these are the steps to applying the changes to your fork:
-  1. There are a few ways to `git add` files, but here are three:
+  1. Run `git status` to see the current branch you are working in and see the files that have changed
+  2. There are a few ways to `git add` files, but here are three:
       * `git add <filename>` will add a single file
       * `git add <folder-name>/<filename>` will add a single file if it is in a certain folder
       * `git add .` adds everything
-  2. Once you've added the file(s) changed, you now need to commit by `git commit -m 'Short message that explains the change you made'`
-  3. `git pull upstream master` is a check to ensure that there are no conflicts
-  4. If there are no conflicts, you can now push the changes to your fork using `git push origin master`
+  3. Once you've added the file(s) changed, you now need to commit by `git commit -m 'Short message that explains the change you made'`
+  4. `git pull origin master` is a check to ensure that there are no conflicts
+  5. If there are no conflicts, you can now push the changes to your fork, but instead of pushing to `master`, you do `git push origin branch-name`
 
 Submitting a Pull Request:
   * Go to the Pull requests tab in your fork, then hit the New Pull Request button
