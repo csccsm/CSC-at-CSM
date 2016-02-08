@@ -38,11 +38,11 @@
 
 				<div class="main-menu">
 				  <a class ="left-menu" href="/">home</a>
-				  <a href="about.html">about</a>
-          <a href="events.html">events</a>
-				  <a href="contact.html">contact</a>
-				  <a href="projects.html">projects</a>
-				  <a class="right-menu"href="members.html">members</a>
+				  <a href="/about">about</a>
+          		  <a href="/events">events</a>
+				  <a href="/contact">contact</a>
+				  <a href="/projects">projects</a>
+				  <a class="right-menu"href="/members">members</a>
 				</div> <!-- main-menu -->
 
 				<div class="main-header">
@@ -149,20 +149,19 @@
 		<h1>Some Other Section</h1>
 		<h4>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
 	</div>
-
-    <div id="main">
-      <ul id="list-events">
-         <!--
-            list of events
-            <li>
-               <H3>title
-               <p>description
-         -->
-
-      </ul>
-    </div>
-
-    <script src="assets/js/index.js"></script>
-
+	<div class="show-events">
+		<section class='col-xs-12 col-sm-6 col-md-6'>
+			<section>
+	          <h2>All Events</h2>
+	            <% events.forEach(function(event) { %>
+	            <tr>
+	              <td><%= event.title %></td>
+	              <td><%= event.date %></td>
+	              <td><%= event.description %></td>
+	            </tr>
+	            <% }); %>
+	        </section>
+	    </section>
+	</div>
   </body>
 </html>
