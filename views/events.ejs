@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <title>Events | CSC</title>
+  <head>
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <script src="../assets/js/script.js"></script>
+
+    <!--    bootstrap    -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Connect to Parse -->
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+
+    <!-- Calendar to select dates -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/latest/css/bootstrap.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+  </head>
+
+  <!-- ==================== end head ====================== -->
+
+  <body>
+
+  <div class="container">
+    <div class="header">
+
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="logo">
+              <img src="../assets/images/pink_logo_placeholder.png">
+            </div> <!-- logo -->
+
+          </div> <!-- bootstrap left -->
+          <div class="col-lg-9 col-md-9 col-sm-9">
+
+            <div class="main-menu">
+              <a class ="left-menu" href="/">home</a>
+              <a href="/about">about</a>
+              <a href="/events">events</a>
+              <a href="/contact">contact</a>
+              <a href="/projects">projects</a>
+              <a class="right-menu"href="/members">members</a>
+            </div> <!-- main-menu -->
+
+            <div class="main-header">
+              <h1>Computer Science Club</h1>
+              <h4>College of San Mateo</h4>
+              <h4>1700 W Hillsdale Blvd</h4>
+              <h4>San Mateo, CA, 94402</h4>
+            </div> <!-- main-header -->
+
+          </div> <!-- bootstrap right -->
+        </div> <!-- bootstrap row -->
+      </div> <!-- header -->
+    </div><!-- container -->
+
+    <div class="main">
+      <h1>Post new event</h1>
+      <form method="post" action="/events" accept-charset="utf-8">
+        <div class="form-group">
+         <label>Event Title</labe>
+         <input name="title" type="text" class="form-group" />
+        </div>
+        <div>
+          <label>Choose Date</date>
+          <input name="date" type="text" class="form-group" />
+           <script type="text/javascript">
+              $(function() {
+                  $('input[name="date"]').daterangepicker({
+                      singleDatePicker: true,
+                      showDropdowns: true
+                  },
+                  function(start, end, label) {
+                      var years = moment().diff(start, 'years');
+                  });
+              });
+           </script>
+         </div>
+         <div>
+          <label>Description</label>
+          <textarea name="description" class="form-group"></textarea>
+         </div>
+         <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="show-events">
+    <section class='col-xs-12 col-sm-6 col-md-6'>
+      <section>
+            <h2>All Events</h2>
+              <% events.forEach(function(event) { %>
+              <tr>
+                <td><%= event.title %></td>
+                <td><%= event.date %></td>
+                <td><%= event.description %></td>
+              </tr>
+              <% }); %>
+          </section>
+    </section>
+    </div>
+  </body>
+</html>

@@ -34,7 +34,9 @@ IMPORTANT FOR OSX AND LINUX USERS! NEVER RUN MONGODB AS ROOT (sudo). For most Li
  * Then run `mongod` to check if it worked
 
 Node.js tutorial: https://www.youtube.com/playlist?list=PLVjmhljdg0BEj7EpSXaxYJiCWwHwXhuV1
+
 MongoDB tutorial: https://www.youtube.com/playlist?list=PLGLfVvz_LVvRfdt8_W0dV311Xa8SayfCY
+
 Tutorial of how to use MongoDB with Node.js: https://www.youtube.com/watch?v=Do_Hsb_Hs3c
 
 Once you have installed Node.js and MongoDB installed, here are the steps to getting the project onto your computer:
@@ -59,7 +61,7 @@ Once you have made changes, these are the steps to applying the changes to your 
       * `git add <folder-name>/<filename>` will add a single file if it is in a certain folder
       * `git add .` adds everything
   3. Once you've added the file(s) changed, you now need to commit by `git commit -m 'Short message that explains the change you made'`
-  4. `git pull origin master` is a check to ensure that there are no conflicts
+  4. `git pull upstream master` is a check to ensure that there are no conflicts
   5. If there are no conflicts, you can now push the changes to your fork, but instead of pushing to `master`, you do `git push origin branch-name`
 
 Submitting a Pull Request:
