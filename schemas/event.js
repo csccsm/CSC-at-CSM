@@ -1,6 +1,8 @@
-var mongoose = require('mongoose');
+'use strict'
 
-var eventSchema = new mongoose.Schema({
+let mongoose = require('mongoose');
+
+let eventSchema = new mongoose.Schema({
 	title: String,
 	description: String,
 	date: String
