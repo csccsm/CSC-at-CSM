@@ -1,7 +1,9 @@
-var path = require('path');
-var express = require('express');
-var Event = require('../schemas/event');
-var router = express.Router();
+'use strict'
+
+let path = require('path');
+let express = require('express');
+let Event = require('../schemas/event');
+let router = express.Router();
 
 module.exports = function(app) {
   // Retrieve all events to show on page========================================
