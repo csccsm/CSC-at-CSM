@@ -20,15 +20,15 @@ app.set('view engine', 'ejs');
 app.use('/assets', express.static(__dirname + '/assets'));
 app.use(logger('dev'));
 app.use(cookieParser());
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use ('/events', require('./routes/events')(app));
 
 // Configure routes============================================================
-app.get('/', require('./routes/index')(app));
-app.get('/events', require('./routes/events')(app));
-app.get('/about', require('./routes/about')(app));
-app.get('/contact', require('./routes/contact')(app));
-app.get('/members', require('./routes/members')(app));
-app.get('/projects', require('./routes/projects'))
+app.use('/', require('./routes/index')(app));
+app.use('/about', require('./routes/about')(app));
+app.use('/contact', require('./routes/contact')(app));
+app.use('/members', require('./routes/members')(app));
+app.use('/projects', require('./routes/projects'))
 
 // Launch server===============================================================
 app.listen(port);
