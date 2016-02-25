@@ -1,9 +1,12 @@
-var path = require('path');
-var express = require('express');
-var Event = require('../schemas/event');
-var router = express.Router();
+'use strict'
+
+let path = require('path');
+let express = require('express');
+let Event = require('../schemas/event');
+let router = express.Router();
 
 module.exports = function(app) {
+  // Retrieve all events to show on page========================================
   router.get('/', function(req, res) {
     Event.find({}, function(err, docs) {
       if (err) {
@@ -16,7 +19,7 @@ module.exports = function(app) {
 
   // Save new events============================================================
   router.post('/', function(req, res) {
-    var newEvent = new Event();
+    const newEvent = new Event();
 
     newEvent.title = req.body.title;
     newEvent.date = req.body.date;
