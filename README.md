@@ -44,11 +44,10 @@ Once you have installed Node.js and MongoDB installed, here are the steps to get
   2. `git clone` the HTTPS link from your fork in your terminal/command prompt
   3. Remotely connect to the main CSC-at-CSM repo using `git remote add upstream https://github.com/csccsm/CSC-at-CSM.git`
   4. `cd` into the project directory then run `npm install` to install all dependencies
-  5. Once everything is installed, run `node server.js` to launch the server
+  5. Make sure to launch MongoDB before you launch the server by using `mongod`. You can optionally (But recommended) you run the MongoDB console by running `mongo` in another terminal/command-prompt tab/window
+  6. Then run `node server.js` to launch the server. `node server.js` will not pick up changes to the code right away so you would have to hit `ctrl + c` to stop the server then run it again. The npm package `nodemon` will automatically restart the server when changes are made. You can install `nodemon` by running `sudo npm install -g nodemon`, then `nodemon server.js` once it's installed.
 
 # Contributing
-NOTE: When you make changes to the code, the server will not pick up those changes right away. To get the changes to work, you have to shutdown the server by hitting `ctrl + c` in the terminal/command prompt, then relaunch the server. Installing the Node.js package `nodemon` will allow you to make changes and not have to restart the server since this package knows when you make changes so it will restart for you. You can install `nodemon` by using the command `sudo npm install -g nodemon`.
-
 It is a good idea to create a separate branch if you are working on something specific. This easily allows for others to get an idea of the change you are trying to make and allows for less conflicts when trying to merge. Here are some tips for creating a new branch:
  * Create a new branch: `git checkout -b branch-name`
  * For bug, logic, etc. fixes, your branch name should be something like `fix/name-of-fix`
@@ -68,7 +67,7 @@ Submitting a Pull Request:
   * Go to the Pull requests tab in your fork, then hit the New Pull Request button
   * Then hit the Create Pull Request button
 
-If you run into any issues, please post them in `issues`. Issues can be bugs, logic issues, or suggestions to improve the website as a whole
+If you run into any issues, please post them in `issues`. Issues can be bugs, logic issues, or suggestions to improve the website as a whole. Also, code review is very important! When someone makes a pull request, if you have time, please review their PR.
 
 # Have Fun!
 The club has a wide range of skill sets ranging from beginner to expert. If you have any questions, please do not hesitate to ask. If you have any ideas, do not hesitate to tell us. Some of us will not know `Node.js` or `Prase` as much as someone else does. Some of us will not know as much `CSS` or `HTML` as someone else.But we are all here to help and learn from each other. Do not be afraid to contribute! Have fun and happy coding!
