@@ -63,23 +63,31 @@
 
     <div class="main">
       <h1>Post new event</h1>
-      <form id="event-form">
-         <p><input name="title" type="text"></p>
-         <p><input name="date" type="text">
+      <form method="post" action="/events" accept-charset="utf-8">
+        <div class="form-group">
+         <label>Event Title</labe>
+         <input name="title" type="text" class="form-group" />
+        </div>
+        <div>
+          <label>Choose Date</date>
+          <input name="date" type="text" class="form-group" />
            <script type="text/javascript">
               $(function() {
                   $('input[name="date"]').daterangepicker({
                       singleDatePicker: true,
                       showDropdowns: true
-                  }, 
+                  },
                   function(start, end, label) {
                       var years = moment().diff(start, 'years');
                   });
               });
            </script>
-          </p>
-         <p><textarea name="description"></textarea></p>
-         <p><input id="event-submit" type="submit"></p>
+         </div>
+         <div>
+          <label>Description</label>
+          <textarea name="description" class="form-group"></textarea>
+         </div>
+         <button type="submit">Submit</button>
       </form>
     </div>
     <div class="show-events">
