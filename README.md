@@ -34,11 +34,9 @@ IMPORTANT FOR OSX AND LINUX USERS! NEVER RUN MONGODB AS ROOT (sudo). For most Li
  * Then run `mongod` to check if it worked
 
 Node.js tutorial: https://www.youtube.com/playlist?list=PLVjmhljdg0BEj7EpSXaxYJiCWwHwXhuV1
-
 MongoDB tutorial: https://www.youtube.com/playlist?list=PLGLfVvz_LVvRfdt8_W0dV311Xa8SayfCY
-
 Tutorial of how to use MongoDB with Node.js: https://www.youtube.com/watch?v=Do_Hsb_Hs3c
-
+Express is the Node.js framework being used to create the website. Here is a tutorail: https://www.youtube.com/watch?v=xDCKcNBFsuI 
 Once you have installed Node.js and MongoDB installed, here are the steps to getting the project onto your computer:
   1. Fork the project
   2. `git clone` the HTTPS link from your fork in your terminal/command prompt
