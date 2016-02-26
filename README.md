@@ -69,4 +69,4 @@ Submitting a Pull Request:
 If you run into any issues, please post them in `issues`. Issues can be bugs, logic issues, or suggestions to improve the website as a whole. Also, code review is very important! When someone makes a pull request, if you have time, please review their PR.
 
 # Have Fun!
-The club has a wide range of skill sets ranging from beginner to expert. If you have any questions, please do not hesitate to ask. If you have any ideas, do not hesitate to tell us. Some of us will not know `Node.js` or `Prase` as much as someone else does. Some of us will not know as much `CSS` or `HTML` as someone else.But we are all here to help and learn from each other. Do not be afraid to contribute! Have fun and happy coding!
+The club has a wide range of skill sets ranging from beginner to expert. If you have any questions, please do not hesitate to ask. If you have any ideas, do not hesitate to tell us. Some of us will not know `Node.js` or `MongoDB` as much as someone else does. Some of us will not know as much `CSS` or `HTML` as someone else, but we are all here to help and learn from each other. Do not be afraid to contribute! Have fun and happy coding!
