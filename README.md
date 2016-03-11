@@ -33,10 +33,11 @@ IMPORTANT FOR OSX AND LINUX USERS! NEVER RUN MONGODB AS ROOT (sudo). For most Li
  * Then run `sudo chmod 777 /data/db`
  * Then run `mongod` to check if it worked
 
-Node.js tutorial: https://www.youtube.com/playlist?list=PLVjmhljdg0BEj7EpSXaxYJiCWwHwXhuV1
-MongoDB tutorial: https://www.youtube.com/playlist?list=PLGLfVvz_LVvRfdt8_W0dV311Xa8SayfCY
-Tutorial of how to use MongoDB with Node.js: https://www.youtube.com/watch?v=Do_Hsb_Hs3c
-Express is the Node.js framework being used to create the website. Here is a tutorail: https://www.youtube.com/watch?v=xDCKcNBFsuI 
+Tutorials
+* Node.js tutorial: https://www.youtube.com/playlist?list=PLVjmhljdg0BEj7EpSXaxYJiCWwHwXhuV1
+* MongoDB tutorial: https://www.youtube.com/playlist?list=PLGLfVvz_LVvRfdt8_W0dV311Xa8SayfCY
+* Tutorial of how to use MongoDB with Node.js: https://www.youtube.com/watch?v=Do_Hsb_Hs3c
+* Express is the Node.js framework being used to create the website. Here is a tutorial: https://www.youtube.com/watch?v=xDCKcNBFsuI 
 
 Once you have installed Node.js and MongoDB installed, here are the steps to getting the project onto your computer:
   1. Fork the project
@@ -69,4 +70,4 @@ Submitting a Pull Request:
 If you run into any issues, please post them in `issues`. Issues can be bugs, logic issues, or suggestions to improve the website as a whole. Also, code review is very important! When someone makes a pull request, if you have time, please review their PR.
 
 # Have Fun!
-The club has a wide range of skill sets ranging from beginner to expert. If you have any questions, please do not hesitate to ask. If you have any ideas, do not hesitate to tell us. Some of us will not know `Node.js` or `Prase` as much as someone else does. Some of us will not know as much `CSS` or `HTML` as someone else.But we are all here to help and learn from each other. Do not be afraid to contribute! Have fun and happy coding!
+The club has a wide range of skill sets ranging from beginner to expert. If you have any questions, please do not hesitate to ask. If you have any ideas, do not hesitate to tell us. Some of us will not know `Node.js` or `MongoDB` as much as someone else does. Some of us will not know as much `CSS` or `HTML` as someone else, but we are all here to help and learn from each other. Do not be afraid to contribute! Have fun and happy coding!
