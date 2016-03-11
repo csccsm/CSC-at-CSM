@@ -30,7 +30,7 @@ app.use('/about', require('./routes/about')(app));
 app.use ('/events', require('./routes/events')(app));
 app.use('/contact', require('./routes/contact')(app));
 app.use('/members', require('./routes/members')(app));
-app.use('/projects', require('./routes/projects'))
+app.use('/projects', require('./routes/projects')(app))
 
 // Launch server===============================================================
 app.listen(port);
