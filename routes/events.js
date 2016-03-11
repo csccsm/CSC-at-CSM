@@ -19,7 +19,7 @@ module.exports = function(app) {
 
   // Save new events============================================================
   router.post('/', function(req, res) {
-    const newEvent = new Event();
+    let newEvent = new Event();
 
     newEvent.title = req.body.title;
     newEvent.date = req.body.date;
