@@ -26,7 +26,6 @@ module.exports = function(app) {
 
     newEvent.save(function(err,  docs) {
       if (err) throw err;
-      console.log(newEvent);
       res.redirect('/events');
     });
   });
