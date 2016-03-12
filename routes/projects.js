@@ -21,6 +21,12 @@ module.exports = function(app) {
 		newProject.title = req.body.title;
 		newProject.description = req.body.description;
 		newProject.link = req.body.link;
+
+		newProject.save(function(err, docs) {
+			if (err) throw err;
+			console.log(newProject);
+			res.redirect('/');
+		})
 	});
 	return router;
 }
