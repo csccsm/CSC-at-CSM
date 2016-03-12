@@ -12,7 +12,6 @@ module.exports = function(app) {
       if (err) {
         res.send(err);
       }
-      console.log(docs);
       res.render('events', {events: docs});
     });
   });
