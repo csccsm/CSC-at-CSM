@@ -65,11 +65,11 @@
       <h1>Post new event</h1>
       <form method="post" action="/events" accept-charset="utf-8">
         <div class="form-group">
-         <label>Event Title</labe>
+         <label>Event Title</label><br>
          <input name="title" type="text" class="form-group" />
         </div>
         <div>
-          <label>Choose Date</date>
+          <label>Choose Date</date><br>
           <input name="date" type="text" class="form-group" />
            <script type="text/javascript">
               $(function() {
@@ -84,7 +84,7 @@
            </script>
          </div>
          <div>
-          <label>Description</label>
+          <label>Description</label><br>
           <textarea name="description" class="form-group"></textarea>
          </div>
          <button type="submit">Submit</button>
@@ -95,11 +95,11 @@
       <section>
             <h2>All Events</h2>
               <% events.forEach(function(event) { %>
-              <tr>
-                <td><%= event.title %></td>
-                <td><%= event.date %></td>
-                <td><%= event.description %></td>
-              </tr>
+                  <ul>
+                    <li><%= event.title %></li>
+                    <td><%= event.date %></td><br>
+                    <td><%= event.description %></td>
+                  </ul>
               <% }); %>
           </section>
     </section>
