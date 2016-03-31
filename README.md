@@ -1,5 +1,5 @@
 # CSC-at-CSM
-The Computer Science Club at the College of San Mateo website is a collaborative website built by the memebers of the club. It will contain our upcoming events and pictures of the events we've had, links to projects that we've created and worked on, and all the memebers of the club.
+The Computer Science Club at the College of San Mateo website is a collaborative website built by the members of the club. It will contain our upcoming events and pictures of the events we've had, links to projects that we've created and worked on, and all the members of the club.
 
 # Getting Setup and Running The Project
 We are using Node.js for our sever infrastructure and MongoDB as our database. Together, they make it easy to setup our backend infrastructure.
