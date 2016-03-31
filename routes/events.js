@@ -1,6 +1,5 @@
 'use strict'
 
-let path = require('path');
 let express = require('express');
 let Event = require('../schemas/event');
 let router = express.Router();
@@ -12,7 +11,6 @@ module.exports = function(app) {
       if (err) {
         res.send(err);
       }
-      console.log(docs);
       res.render('events', {events: docs});
     });
   });
@@ -27,7 +25,6 @@ module.exports = function(app) {
 
     newEvent.save(function(err,  docs) {
       if (err) throw err;
-      console.log(newEvent);
       res.redirect('/events');
     });
   });
