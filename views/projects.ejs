@@ -53,6 +53,36 @@
 
       </div> <!-- header -->
     </div><!-- container -->
-
+    <div class="main">
+      <h1>Post new event</h1>
+      <form method="post" action="/projects" accept-charset="utf-8">
+        <div class="form-group">
+         <label>Project Title</label><br>
+         <input name="title" type="text" class="form-group" />
+        </div>
+        <div>
+          <label>Project Link</label><br>
+          <input name="link" type="text" class="form-group" />
+        </div>
+        <div>
+          <label>Project Description</label><br>
+          <textarea name="description" class="form-group"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>  <div class="show-projects">
+      <section class='col-xs-12 col-sm-6 col-md-6'>
+        <section>
+              <h2>All Projects</h2>
+                <% projects.forEach(function(project) { %>
+                    <ul>
+                      <li><%= project.title %></li>
+                      <td><%= project.link %></td><br>
+                      <td><%= project.description %></td>
+                    </ul>
+                <% }); %>
+            </section>
+      </section>
+      </div>
   </body>
 </html>

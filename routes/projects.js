@@ -10,7 +10,6 @@ module.exports = function(app) {
 			if (err) {
 				res.send(err);
 			}
-			console.log(docs);
 			res.render('projects', {projects: docs});
 		});
   });
@@ -19,13 +18,12 @@ module.exports = function(app) {
 		let newProject = new Project();
 
 		newProject.title = req.body.title;
-		newProject.description = req.body.description;
 		newProject.link = req.body.link;
+		newProject.description = req.body.description;
 
 		newProject.save(function(err, docs) {
 			if (err) throw err;
-			console.log(newProject);
-			res.redirect('/');
+			res.redirect('/projects');
 		})
 	});
 	return router;
