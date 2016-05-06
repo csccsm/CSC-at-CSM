@@ -23,9 +23,12 @@ module.exports = function(app) {
     newEvent.date = req.body.date;
     newEvent.description = req.body.description;
 
-    newEvent.save(function(err,  docs) {
-      if (err) throw err;
-      res.redirect('/events');
+    newEvent.save(function(err) {
+      if (err) {
+        res.sendStatus(403);
+      } else {
+        res.redirect('/events');
+      }
     });
   });
   return router;
