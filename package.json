@@ -1,6 +1,11 @@
 {
   "name": "csc-website",
   "version": "0.0.1",
+  "scripts": {
+    "start": "npm run watch",
+    "start:once": "node server.js",
+    "watch": "nodemon server.js"
+  },
   "dependencies": {
     "body-parser": "^1.14.2",
     "cookie-parser": "^1.4.0",
@@ -10,5 +15,8 @@
     "express": "^4.13.3",
     "helmet": "^1.3.0",
     "mongoose": "^4.3.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
   }
 }
