@@ -4,7 +4,7 @@
   "scripts": {
     "start": "npm run watch",
     "start:once": "node server.js",
-    "watch": "nodemon server.js"
+    "watch": "node ./node_modules/nodemon/bin/nodemon server.js"
   },
   "dependencies": {
     "body-parser": "^1.14.2",
