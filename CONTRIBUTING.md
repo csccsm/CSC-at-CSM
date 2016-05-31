@@ -52,6 +52,11 @@ mongod
 
 # Run server
 node server.js
+
+# If nodemon is installed, use these ONE of these commands to run the server
+npm start
+npm run watch
+nodemon server.js
 ```
   * NOTE: If any changes are made, you would have to hit `ctrl + c` to stop the server then start it again. Installing `nodemon` will automatically restart the server once changes are made. You can install `nodemon` by using the command `npm install -g nodemon`
     * NOTE: After you have initially installed Node.js, you can only globally install `npm` packages using `sudo`. This is also bad so you need to fix your permissions which you can do here: https://docs.npmjs.com/getting-started/fixing-npm-permissions
