@@ -21,10 +21,7 @@ module.exports = app => {
   // Save new events============================================================
   router.post('/', (req, res) => {
     // Create a new Event object to be saved in the db
-    var newEvent = new Event();
-    newEvent.title = req.body.title;
-    newEvent.date = req.body.date;
-    newEvent.description = req.body.description;
+    var newEvent = new Event({title: req.body.title, date: req.body.date, description: req.body.description});
 
     // Save new Event
     newEvent.save(err => {

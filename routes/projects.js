@@ -21,10 +21,7 @@ module.exports = app => {
 	// Save new projects==========================================================
 	router.post('/', (req, res) => {
 		// Create new Project object
-		var newProject = new Project();
-		newProject.title = req.body.title;
-		newProject.link = req.body.link;
-		newProject.description = req.body.description;
+		var newProject = new Project({title: req.body.title, link: req.body.link, description: req.body.description});
 
 		// Save new Project
 		newProject.save(err => {
