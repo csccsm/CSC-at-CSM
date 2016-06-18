@@ -53,7 +53,7 @@ mongod
 # Run server
 node server.js
 
-# If nodemon is installed, use these ONE of these commands to run the server
+# If nodemon is installed, use ONE of these commands to run the server
 npm start
 npm run watch
 nodemon server.js
