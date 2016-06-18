@@ -1,16 +1,16 @@
 'use strict'
 
-let express = require('express');
-let Event = require('../schemas/event');
-let router = express.Router();
+var express = require('express');
+var Event = require('../schemas/event');
+var router = express.Router();
 
-module.exports = function(app) {
+module.exports = app => {
   /*
   The HTTP methods GET and POST are used. The GET method retrieves the data from the events collection in our MongoDB db. The POST method will send that data to the events collection to be saved in the db.
   */
   // Retrieve all events to show on page========================================
-  router.get('/', function(req, res) {
-    Event.find({}, function(err, docs) {
+  router.get('/', (req, res) => {
+    Event.find({}, (err, docs) => {
       if (err) {
         res.send(err);
       }
@@ -19,15 +19,12 @@ module.exports = function(app) {
   });
 
   // Save new events============================================================
-  router.post('/', function(req, res) {
+  router.post('/', (req, res) => {
     // Create a new Event object to be saved in the db
-    let newEvent = new Event();
-    newEvent.title = req.body.title;
-    newEvent.date = req.body.date;
-    newEvent.description = req.body.description;
+    var newEvent = new Event({title: req.body.title, date: req.body.date, description: req.body.description});
 
     // Save new Event
-    newEvent.save(function(err) {
+    newEvent.save(err => {
       if (err) {
         res.sendStatus(403);
       } else {

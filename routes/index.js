@@ -2,9 +2,9 @@ var express = require('express');
 var Event = require('../schemas/event');
 var router = express.Router();
 
-module.exports = function(app) {
-  router.get('/', function(req, res) {
-    Event.find({}, function(err, docs) {
+module.exports = app => {
+  router.get('/', (req, res) => {
+    Event.find({}, (err, docs) => {
       if (err) {
         res.send(err);
       }
