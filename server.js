@@ -1,19 +1,19 @@
 'use strict'
 
-let bodyParser = require('body-parser');
-let cookieParser = require('cookie-parser');
-let cookieSession = require('cookie-session');
-let path = require('path');
-let logger = require('morgan');
-let express = require('express');
-let mongoose = require('mongoose');
-let helmet = require('helmet');
-let db = require('./db');
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var cookieSession = require('cookie-session');
+var path = require('path');
+var logger = require('morgan');
+var express = require('express');
+var mongoose = require('mongoose');
+var helmet = require('helmet');
+var db = require('./db');
 
-let app = express();
+var app = express();
 
-let ip = process.env.IP || '127.0.0.1' || 'localhost';
-let port = process.env.PORT || 8080;
+var ip = process.env.IP || '127.0.0.1' || 'localhost';
+var port = process.env.PORT || 8080;
 
 // Connect to database==========================================================
 mongoose.connect(db.uri);
@@ -50,7 +50,7 @@ app.use ('/events', require('./routes/events')(app));
 app.use('/contact', require('./routes/contact')(app));
 app.use('/members', require('./routes/members')(app));
 app.use('/projects', require('./routes/projects')(app));
-app.use(function(req, res) {
+app.use((req, res) => {
   res.status(404).render('404');
 });
 

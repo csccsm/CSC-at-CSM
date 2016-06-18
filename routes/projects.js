@@ -1,16 +1,16 @@
 'use strict'
 
-let express = require('express');
-let Project = require('../schemas/project');
-let router = express.Router();
+var express = require('express');
+var Project = require('../schemas/project');
+var router = express.Router();
 
-module.exports = function(app) {
+module.exports = app => {
 	/*
   The HTTP methods GET and POST are used. The GET method retrieves the data from the events collection in our MongoDB db. The POST method will send that data to the projects collection to be saved in the db.
   */
 	// Retrieve all projectss to show on page=====================================
-	router.get('/', function(req, res) {
-  	Project.find({}, function(err, docs) {
+	router.get('/', (req, res) => {
+  	Project.find({}, (err, docs) => {
 			if (err) {
 				res.send(err);
 			}
@@ -19,15 +19,12 @@ module.exports = function(app) {
   });
 
 	// Save new projects==========================================================
-	router.post('/', function(req, res) {
+	router.post('/', (req, res) => {
 		// Create new Project object
-		let newProject = new Project();
-		newProject.title = req.body.title;
-		newProject.link = req.body.link;
-		newProject.description = req.body.description;
+		var newProject = new Project({title: req.body.title, link: req.body.link, description: req.body.description});
 
 		// Save new Project
-		newProject.save(function(err) {
+		newProject.save(err => {
 			if (err) {
 				res.sendStatus(403);
 			} else {
