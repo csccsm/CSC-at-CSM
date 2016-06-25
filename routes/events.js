@@ -37,7 +37,7 @@ module.exports = app => {
   router.get('/:id', (req, res) => {
     Event.findById(req.params.id, (err, doc) => {
       if (err) { res.sendStatus(403); }
-      res.render('show', {events: doc, current: req.params.id});
+      res.render('show', {events: doc});
     });
   });
   return router;
