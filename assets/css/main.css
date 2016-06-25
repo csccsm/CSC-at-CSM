@@ -34,6 +34,20 @@
   position: relative;
 }
 
+.show-projects h2 {
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.show-projects h3{
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.show-projects hr {
+    height: 1px;
+    color: black; 
+    background-color: black; 
+}
+
 /*Carousel rules*/
 .slider-container {
 	padding-left: 0;
