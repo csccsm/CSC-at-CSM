@@ -10,10 +10,9 @@ module.exports = app => {
   */
   // Retrieve all events to show on page========================================
   router.get('/', (req, res) => {
+    // Find all MongoDB documents from the events collection
     Event.find({}, (err, docs) => {
-      if (err) {
-        res.send(err);
-      }
+      if (err) { res.send(err); }
       res.render('events', {events: docs});
     });
   });
@@ -21,15 +20,24 @@ module.exports = app => {
   // Save new events============================================================
   router.post('/', (req, res) => {
     // Create a new Event object to be saved in the db
-    var newEvent = new Event({title: req.body.title, date: req.body.date, description: req.body.description});
+    var newEvent = new Event({
+      title: req.body.title,
+      date: req.body.date,
+      description: req.body.description
+    });
 
-    // Save new Event
+    // Save new event
     newEvent.save(err => {
-      if (err) {
-        res.sendStatus(403);
-      } else {
-        res.redirect('/events');
-      }
+      if (err) { res.sendStatus(403); } // Replace this with a flash message
+      res.redirect('/events');
+    });
+  });
+
+  // Finds the event user clicks on and shows all information
+  router.get('/:id', (req, res) => {
+    Event.findById(req.params.id, (err, doc) => {
+      if (err) { res.sendStatus(403); }
+      res.render('show', {events: doc, current: req.params.id});
     });
   });
   return router;
