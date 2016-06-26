@@ -10,10 +10,9 @@ module.exports = app => {
   */
 	// Retrieve all projectss to show on page=====================================
 	router.get('/', (req, res) => {
+		// Find all MongoDB documents in the projects collection
   	Project.find({}, (err, docs) => {
-			if (err) {
-				res.send(err);
-			}
+			if (err) { res.send(err); } // Replace with flash message
 			res.render('projects', {projects: docs});
 		});
   });
@@ -21,15 +20,16 @@ module.exports = app => {
 	// Save new projects==========================================================
 	router.post('/', (req, res) => {
 		// Create new Project object
-		var newProject = new Project({title: req.body.title, link: req.body.link, description: req.body.description});
+		var newProject = new Project({
+			title: req.body.title,
+			link: req.body.link,
+			description: req.body.description
+		});
 
 		// Save new Project
 		newProject.save(err => {
-			if (err) {
-				res.sendStatus(403);
-			} else {
-				res.redirect('/projects');
-			}
+			if (err) { res.sendStatus(403); } // Replace with flash message
+			res.redirect('/projects');
 		});
 	});
 	return router;

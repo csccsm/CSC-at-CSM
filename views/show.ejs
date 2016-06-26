@@ -63,45 +63,13 @@
     </div><!-- container -->
 
     <div class="main">
-      <h1>Post new event</h1>
-      <form method="post" action="/events" accept-charset="utf-8">
-        <div class="form-group">
-         <label>Event Title</label><br>
-         <input name="title" type="text" class="form-group" />
-        </div>
-        <div>
-          <label>Choose Date</date><br>
-          <input name="date" type="text" class="form-group" />
-           <script type="text/javascript">
-              $(function() {
-                  $('input[name="date"]').daterangepicker({
-                      singleDatePicker: true,
-                      showDropdowns: true
-                  },
-                  function(start, end, label) {
-                      var years = moment().diff(start, 'years');
-                  });
-              });
-           </script>
-         </div>
-         <div>
-          <label>Event Description</label><br>
-          <textarea name="description" class="form-group"></textarea>
-         </div>
-         <button type="submit">Submit</button>
-      </form>
-    </div>
-    <div class="show-events">
-    <section class='col-xs-12 col-sm-6 col-md-6'>
-      <section>
-            <h2>All Events</h2>
-              <% events.forEach(function(event) { %>
-                  <ul>
-                    <li><a href="/events/<%= event._id %>"><%= event.title %></a></li>
-                  </ul>
-              <% }); %>
-          </section>
-    </section>
+      <div class="show-events">
+      <section class='col-xs-12 col-sm-6 col-md-6'>
+        <h1><%= events.title ? events.title: '' %></h1>
+        <p><%= events.date ? events.date : '' %></p>
+        <p><%= events.description ? events.description : '' %></p>
+      </section>
+      </div>
     </div>
 
 	<!-- Footer Content -->
