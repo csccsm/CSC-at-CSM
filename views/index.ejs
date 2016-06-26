@@ -1,201 +1,112 @@
 <!DOCTYPE html>
 <html>
   <title>Home | CSC</title>
-  <head>
+  <% include _header %>
 
-  <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-  <script src="../assets/js/script.js"></script>
+  	<div class="slider-container">
 
-  <!--    bootstrap    -->
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- Latest compiled JavaScript -->
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <!-- Connect to Parse -->
-  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+  		<div id="myCarousel" class="carousel slide">
 
+  			<!-- Carousel items -->
+  			<div class="carousel-inner">
 
-  </head>
+  				<div class="item active">
+  					<div class="row-fluid">
+  						<div class="span12">
+  							<a href="#x">
+  								<img src="http://placehold.it/1200x300" alt="Background Image" width="100%">
+  							</a>
+  							<div class="slide-text">
+  								<h1>Header</h1>
+  								<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+  							</div>
+  						</div>
+  					</div><!--/row-fluid-->
+  				</div><!--/item-->
 
-  <!-- ==================== end head ====================== -->
+  				<div class="item">
+  					<div class="row-fluid">
+  						<div class="span12">
+  							<a href="#x">
+  								<img src="http://placehold.it/1200x300" alt="Background Image" width="100%">
+  							</a>
+  							<div class="slide-text">
+  								<h1>Header</h1>
+  								<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+  							</div>
+  						</div>
+  					</div><!--/row-fluid-->
+  				</div><!--/item-->
 
-  <body>
+  				<div class="item">
+  					<div class="row-fluid">
+  						<div class="span12">
+  							<a href="#x">
+  								<img src="http://placehold.it/1200x300" alt="Background Image" width="100%">
+  							</a>
+  							<div class="slide-text">
+  								<h1>Header</h1>
+  								<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+  							</div>
+  						</div>
+  					</div><!--/row-fluid-->
+  				</div><!--/item-->
 
-  <div class="container">
-    <div class="header">
+  				<div class="item">
+  					<div class="row-fluid">
+  						<div class="span12">
+  							<a href="#x">
+  								<img src="http://placehold.it/1200x300" alt="Background Image" width="100%">
+  							</a>
+  							<div class="slide-text">
+  								<h1>Header</h1>
+  								<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+  							</div>
+  						</div>
+  					</div><!--/row-fluid-->
+  				</div><!--/item-->
 
-        <div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-3">
-				<div class="logo">
-				  <img src="../assets/images/pink_logo_placeholder.png">
-				</div> <!-- logo -->
+  			</div><!--/carousel-inner-->
 
-			</div> <!-- bootstrap left -->
+  			<!-- Left and right controls -->
+  			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+  				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  				<span class="sr-only">Previous</span>
+  			</a>
+  			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+  				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  				<span class="sr-only">Next</span>
+  			</a>
 
-			<div class="col-lg-9 col-md-9 col-sm-9">
+  			<div class="indicators-position">
+  				<ol class="carousel-indicators">
+  					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+  					<li data-target="#myCarousel" data-slide-to="1"></li>
+  					<li data-target="#myCarousel" data-slide-to="2"></li>
+  					<li data-target="#myCarousel" data-slide-to="3"></li>
+  				</ol>
+  			</div> <!--/indicators-position-->
 
-				<div class="main-menu">
-				  <a class ="left-menu" href="/">home</a>
-				  <a href="/about">about</a>
-          		  <a href="/events">events</a>
-				  <a href="/contact">contact</a>
-				  <a href="/projects">projects</a>
-				  <a class="right-menu"href="/members">members</a>
-				</div> <!-- main-menu -->
+  		</div><!--/myCarousel-->
+  	</div> <!--/slider-container-->
 
-				<div class="main-header">
-				  <h1>Computer Science Club</h1>
-				  <h4>College of San Mateo</h4>
-				  <h4>1700 W Hillsdale Blvd</h4>
-				  <h4>San Mateo, CA, 94402</h4>
-				</div> <!-- main-header -->
+  	<div class="some-other-section">
+  		<h1>Some Other Section</h1>
+  		<h4>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
+  	</div>
 
-			</div> <!-- bootstrap right -->
-
-        </div> <!-- bootstrap row -->
-      </div> <!-- header -->
-    </div><!-- container -->
-
-	<div class="slider-container">
-
-		<div id="myCarousel" class="carousel slide">
-
-			<!-- Carousel items -->
-			<div class="carousel-inner">
-
-				<div class="item active">
-					<div class="row-fluid">
-						<div class="span12">
-							<a href="#x">
-								<img src="http://placehold.it/1200x300" alt="Background Image" width="100%">
-							</a>
-							<div class="slide-text">
-								<h1>Header</h1>
-								<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
-							</div>
-						</div>
-					</div><!--/row-fluid-->
-				</div><!--/item-->
-
-				<div class="item">
-					<div class="row-fluid">
-						<div class="span12">
-							<a href="#x">
-								<img src="http://placehold.it/1200x300" alt="Background Image" width="100%">
-							</a>
-							<div class="slide-text">
-								<h1>Header</h1>
-								<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
-							</div>
-						</div>
-					</div><!--/row-fluid-->
-				</div><!--/item-->
-
-				<div class="item">
-					<div class="row-fluid">
-						<div class="span12">
-							<a href="#x">
-								<img src="http://placehold.it/1200x300" alt="Background Image" width="100%">
-							</a>
-							<div class="slide-text">
-								<h1>Header</h1>
-								<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
-							</div>
-						</div>
-					</div><!--/row-fluid-->
-				</div><!--/item-->
-
-				<div class="item">
-					<div class="row-fluid">
-						<div class="span12">
-							<a href="#x">
-								<img src="http://placehold.it/1200x300" alt="Background Image" width="100%">
-							</a>
-							<div class="slide-text">
-								<h1>Header</h1>
-								<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
-							</div>
-						</div>
-					</div><!--/row-fluid-->
-				</div><!--/item-->
-
-			</div><!--/carousel-inner-->
-
-			<!-- Left and right controls -->
-			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-
-			<div class="indicators-position">
-				<ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-					<li data-target="#myCarousel" data-slide-to="2"></li>
-					<li data-target="#myCarousel" data-slide-to="3"></li>
-				</ol>
-			</div> <!--/indicators-position-->
-
-		</div><!--/myCarousel-->
-	</div> <!--/slider-container-->
-
-	<div class="some-other-section">
-		<h1>Some Other Section</h1>
-		<h4>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
-	</div>
-
-	<div class="show-events">
-		<section class='col-xs-12 col-sm-6 col-md-6'>
-			<section>
-	          <h2>All Events</h2>
-            <% events.forEach(function(event) { %>
-                <ul>
-                  <li><a href="/events/<%= event._id %>"><%= event.title %></a></li>
-                </ul>
-            <% }); %>
-	        </section>
-	    </section>
-	</div>
-
-	<!-- Footer Content -->
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-md-8 col-sm-8"">
-				<br><br>
-				<i class="fa fa-twitter">
-					<a href="https://twitter.com/cscatcsm">@CSCatCSM</a>
-				</i>
-				</br>
-				<i class="fa fa-facebook-square">
-					<a href="https://www.facebook.com/groups/760331147414910/">Facebook Group</a>
-				</i>
-				</br>
-				<i class="fa fa-google-plus">
-					<a href="/">gmail</a>
-				</i>
-			</div>
-
-			<div class="col-lg-2 col-md-2 col-sm-2">
-				<h4>Computer Science Club</h4>
-				<h6>College of San Mateo</h6>
-				<h6>1700 W Hillsdale Blvd</h6>
-				<h6>San Mateo, CA, 94402</h6>
-			</div>
-
-			<div class="col-lg-2 col-md-2 col-sm-2">
-				<div class="logo">
-				  <img src="http://placehold.it/120x120">
-				</div>
-			</div>
-		</div>
-	</div>
-
+  	<div class="show-events">
+  		<section class='col-xs-12 col-sm-6 col-md-6'>
+  			<section>
+  	          <h2>All Events</h2>
+              <% events.forEach(function(event) { %>
+                  <ul>
+                    <li><a href="/events/<%= event._id %>"><%= event.title %></a></li>
+                  </ul>
+              <% }); %>
+  	        </section>
+  	    </section>
+  	</div>
+  	<% include _footer %>
   </body>
 </html>

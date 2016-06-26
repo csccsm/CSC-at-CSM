@@ -1,66 +1,7 @@
 <!DOCTYPE html>
 <html>
   <title>Events | CSC</title>
-  <head>
-
-    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
-	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-    <script src="../assets/js/script.js"></script>
-
-    <!--    bootstrap    -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!-- Connect to Parse -->
-    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
-
-    <!-- Calendar to select dates -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/latest/css/bootstrap.css" />
-    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
-  </head>
-
-  <!-- ==================== end head ====================== -->
-
-  <body>
-
-  <div class="container">
-    <div class="header">
-
-        <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="logo">
-              <img src="../assets/images/pink_logo_placeholder.png">
-            </div> <!-- logo -->
-
-          </div> <!-- bootstrap left -->
-          <div class="col-lg-9 col-md-9 col-sm-9">
-
-            <div class="main-menu">
-              <a class ="left-menu" href="/">home</a>
-              <a href="/about">about</a>
-              <a href="/events">events</a>
-              <a href="/contact">contact</a>
-              <a href="/projects">projects</a>
-              <a class="right-menu"href="/members">members</a>
-            </div> <!-- main-menu -->
-
-            <div class="main-header">
-              <h1>Computer Science Club</h1>
-              <h4>College of San Mateo</h4>
-              <h4>1700 W Hillsdale Blvd</h4>
-              <h4>San Mateo, CA, 94402</h4>
-            </div> <!-- main-header -->
-
-          </div> <!-- bootstrap right -->
-        </div> <!-- bootstrap row -->
-      </div> <!-- header -->
-    </div><!-- container -->
+  <% include _header %>
 
     <div class="main">
       <div class="show-events">
@@ -72,38 +13,6 @@
       </div>
     </div>
 
-	<!-- Footer Content -->
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-md-8 col-sm-8"">
-				<br><br>
-				<i class="fa fa-twitter">
-					<a href="https://twitter.com/cscatcsm">@CSCatCSM</a>
-				</i>
-				</br>
-				<i class="fa fa-facebook-square">
-					<a href="https://www.facebook.com/groups/760331147414910/">Facebook Group</a>
-				</i>
-				</br>
-				<i class="fa fa-google-plus">
-					<a href="/">gmail</a>
-				</i>
-			</div>
-
-			<div class="col-lg-2 col-md-2 col-sm-2">
-				<h4>Computer Science Club</h4>
-				<h6>College of San Mateo</h6>
-				<h6>1700 W Hillsdale Blvd</h6>
-				<h6>San Mateo, CA, 94402</h6>
-			</div>
-
-			<div class="col-lg-2 col-md-2 col-sm-2">
-				<div class="logo">
-				  <img src="http://placehold.it/120x120">
-				</div>
-			</div>
-		</div>
-	</div>
-
-  </body>
+  <% include _footer %>
+	</body>
 </html>
