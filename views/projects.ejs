@@ -2,30 +2,12 @@
 <html>
   <title>Projects | CSC</title>
   <% include _header %>
-    <div class="main">
-      <h1>Post New Project</h1>
-      <form method="post" action="/projects" accept-charset="utf-8">
-        <div class="form-group">
-         <label>Project Title</label><br>
-         <input name="title" type="text" class="form-group" />
-        </div>
-        <div>
-          <label>Project Link</label><br>
-          <input name="link" type="text" class="form-group" />
-        </div>
-        <div>
-          <label>Project Description</label><br>
-          <textarea name="description" class="form-group"></textarea>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
 
 	<div class="show-projects">
 		<div class="container">
 			<section class='col-xs-12 col-sm-12 col-md-12'>
 				<section>
-					<h2>All Projects</h2>
+					<h2>All Projects | <a href="/projects/new_project">Add New Project</a></h2>
 					<hr>
 					<% projects.forEach(function(project) { %>
 						<div class="col-xs-12 col-sm-6 col-md-6">

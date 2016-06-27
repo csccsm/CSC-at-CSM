@@ -17,8 +17,12 @@ module.exports = app => {
     });
   });
 
+  router.get('/new_event', (req, res) => {
+    res.render('new_event');
+  });
+
   // Save new events============================================================
-  router.post('/', (req, res) => {
+  router.post('/new_event', (req, res) => {
     // Create a new Event object to be saved in the db
     var newEvent = new Event({
       title: req.body.title,

@@ -3,40 +3,11 @@
   <title>Events | CSC</title>
   <% include _header %>
 
-    <div class="main">
-      <h1>Post new event</h1>
-      <form method="post" action="/events" accept-charset="utf-8">
-        <div class="form-group">
-         <label>Event Title</label><br>
-         <input name="title" type="text" class="form-group" />
-        </div>
-        <div>
-          <label>Choose Date</date><br>
-          <input name="date" type="text" class="form-group" />
-           <script type="text/javascript">
-              $(function() {
-                  $('input[name="date"]').daterangepicker({
-                      singleDatePicker: true,
-                      showDropdowns: true
-                  },
-                  function(start, end, label) {
-                      var years = moment().diff(start, 'years');
-                  });
-              });
-           </script>
-         </div>
-         <div>
-          <label>Event Description</label><br>
-          <textarea name="description" class="form-group"></textarea>
-         </div>
-         <button type="submit">Submit</button>
-      </form>
-    </div>
     <div class="show-events">
       <div class="container">
   			<section class='col-xs-12 col-sm-12 col-md-12'>
   				<section>
-  					<h2>All Events</h2>
+  					<h2>All Events | <a href="/events/new_event">Add New Event</a></h2>
   					<hr>
   					<% events.forEach(function(event) { %>
   						<div class="col-xs-12 col-sm-6 col-md-6">
