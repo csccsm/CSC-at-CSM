@@ -44,8 +44,22 @@
 
 .show-projects hr {
     height: 1px;
-    color: black; 
-    background-color: black; 
+    color: black;
+    background-color: black;
+}
+
+.show-events h2 {
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.show-events h3{
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.show-events hr {
+    height: 1px;
+    color: black;
+    background-color: black;
 }
 
 /*Carousel rules*/
@@ -88,7 +102,7 @@
 }
 
 .indicators-position {
-	position: relative; 
+	position: relative;
 	width: 100px;
 	left: 85%;
 	bottom: -10px;
@@ -105,4 +119,8 @@
 
 .carousel-indicators .active {
 	background: #333333;
+}
+
+.footer {
+  text-align: right;
 }
