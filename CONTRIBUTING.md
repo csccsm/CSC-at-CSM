@@ -26,12 +26,23 @@ Instructions for installing MongoDB:
     * Debian: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-debian/
     * Red Hat/Fedora: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
     * SUSE/OpenSUSE: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-suse/
-    * Arch (Antergos, Manjaro, etc): `Sudo pacman -S mongodb`
+    * Arch (Antergos, Manjaro, etc): `Sudo pacman -S mongodb` or `yaourt -S mongodb`
     
-  * IMPORTANT FOR OSX AND LINUX USERS! Running `mongod` as root (`sudo`) is a bad idea. To avoid running `sudo mongod`, follow the instructiosn below:
-   * Create a `/data/db` directory: `sudo mkdir -p /data/db`
-   * Give /data/db access permissions: OSX: `sudo chmod 777 /data/db` Linux: `sudo chown -R ${whoami} /data/db`
-   * Run the command `mongod` to make sure it works
+  * IMPORTANT FOR OSX AND LINUX USERS! Running `mongod` as root (`sudo`) is a bad idea. To avoid running `sudo mongod`, follow the instructions below:
+   ```shell
+   # Create a /data/db directory
+   sudo mkdir -p /data/db
+   
+   # Give /data/db access permissions
+   # Mac OS X
+   sudo chmod 777 /data/db
+   
+   # Linux
+   sudo chown -R ${whoami} /data/db
+   
+   # Run the mongod command to make sure it worked
+   mongod
+   ```
    
   * For more information on MongoDB, you can look here: http://searchdatamanagement.techtarget.com/definition/MongoDB
   

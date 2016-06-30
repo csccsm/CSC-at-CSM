@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <title>New Project | CSC</title>
+  <% include _header %>
+
+  <div class="main">
+    <h1>Post New Project</h1>
+    <form method="post" action="/projects/new_project" accept-charset="utf-8">
+      <div class="form-group">
+       <label>Project Title</label><br>
+       <input name="title" type="text" class="form-group" />
+      </div>
+      <div>
+        <label>Project Link</label><br>
+        <input name="link" type="text" class="form-group" />
+      </div>
+      <div>
+        <label>Project Description</label><br>
+        <textarea name="description" class="form-group"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+	<% include _footer %>
+  </body>
+</html>

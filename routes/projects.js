@@ -17,8 +17,12 @@ module.exports = app => {
 		});
   });
 
+	router.get('/new_project', (req, res) => {
+		res.render('new_project');
+	});
+
 	// Save new projects==========================================================
-	router.post('/', (req, res) => {
+	router.post('/new_project', (req, res) => {
 		// Create new Project object
 		var newProject = new Project({
 			title: req.body.title,
