@@ -5,26 +5,26 @@
 
     <div class="show-events">
       <div class="container">
-  			<section class='col-xs-12 col-sm-12 col-md-12'>
-  				<section>
-  					<h2>All Events | <a href="/events/new_event">Add New Event</a></h2>
-  					<hr>
-  					<% events.forEach(function(event) { %>
-  						<div class="col-xs-12 col-sm-6 col-md-6">
-  							<table>
+        <section class='col-xs-12 col-sm-12 col-md-12'>
+          <section>
+            <h2>All Events | <a href="/events/new_event">Add New Event</a></h2>
+            <hr>
+            <% events.forEach(function(event) { %>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <table>
                   <a href="/events/<%= event._id %>">
-    								<h3><%= event.title %></h3>
-    								<tr><td><%= event.date %></td></tr>
+                    <h3><%= event.title %></h3>
+                    <tr><td><%= event.date %></td></tr>
                   </a>
-  							</table>
-  						<br>
-  						</div>
-  					<% }); %>
-  				</section>
-  		   </section>
-  		</div>
+                </table>
+              <br>
+              </div>
+            <% }); %>
+          </section>
+        </section>
+      </div>
     </div>
 
-	<% include _footer %>
+  <% include _footer %>
   </body>
 </html>

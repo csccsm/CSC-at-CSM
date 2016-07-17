@@ -35,90 +35,90 @@
 }
 
 .show-projects h2 {
-	font-family: Verdana, Geneva, sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 .show-projects h3{
-	font-family: Verdana, Geneva, sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 .show-projects hr {
-    height: 1px;
-    color: black;
-    background-color: black;
+  height: 1px;
+  color: black;
+  background-color: black;
 }
 
 .show-events h2 {
-	font-family: Verdana, Geneva, sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 .show-events h3{
-	font-family: Verdana, Geneva, sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 .show-events hr {
-    height: 1px;
-    color: black;
-    background-color: black;
+  height: 1px;
+  color: black;
+  background-color: black;
 }
 
 /*Carousel rules*/
 .slider-container {
-	padding-left: 0;
-	padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .carousel {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .carousel-control {
-	left: -12px;
+  left: -12px;
 }
 
 .carousel-control.left {
-	left: -12px;
-	width: 80px;
+  left: -12px;
+  width: 80px;
 }
 
 .carousel-control.right {
-	right: -12px;
-	width: 80px;
+  right: -12px;
+  width: 80px;
 }
 
 .carousel-caption {
-	top: 0px;
+  top: 0px;
 }
 
 .slide-text {
-	position: absolute;
-	width: 500px;
-	left: 55%;
-	top: 20px;
+  position: absolute;
+  width: 500px;
+  left: 55%;
+  top: 20px;
 }
 
 .slide-text h1 {
-	text-align: center;
+  text-align: center;
 }
 
 .indicators-position {
-	position: relative;
-	width: 100px;
-	left: 85%;
-	bottom: -10px;
+  position: relative;
+  width: 100px;
+  left: 85%;
+  bottom: -10px;
 }
 
 .carousel-indicators {
-	top: auto;
-	bottom: 0px;
+  top: auto;
+  bottom: 0px;
 }
 
 .carousel-indicators li {
-	background: #c0c0c0;
+  background: #c0c0c0;
 }
 
 .carousel-indicators .active {
-	background: #333333;
+  background: #333333;
 }
 
 .footer {
