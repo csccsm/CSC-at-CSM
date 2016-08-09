@@ -3,27 +3,27 @@
   <title>Projects | CSC</title>
   <% include _header %>
 
-	<div class="show-projects">
-		<div class="container">
-			<section class='col-xs-12 col-sm-12 col-md-12'>
-				<section>
-					<h2>All Projects | <a href="/projects/new_project">Add New Project</a></h2>
-					<hr>
-					<% projects.forEach(function(project) { %>
-						<div class="col-xs-12 col-sm-6 col-md-6">
-							<table>
-								<h3><%= project.title %></h3>
-								<tr><td><%= project.link %></td></tr>
-								<tr><td><%= project.description %></td></tr>
-							</table>
-						<br>
-						</div>
-					<% }); %>
-				</section>
-		   </section>
-		</div>
+  <div class="show-projects">
+    <div class="container">
+      <section class='col-xs-12 col-sm-12 col-md-12'>
+        <section>
+          <h2>All Projects | <a href="/projects/new_project">Add New Project</a></h2>
+          <hr>
+          <% projects.forEach(function(project) { %>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+              <table>
+                <h3><%= project.title %></h3>
+                <tr><td><%= project.link %></td></tr>
+                <tr><td><%= project.description %></td></tr>
+              </table>
+            <br>
+            </div>
+          <% }); %>
+        </section>
+      </section>
+    </div>
   </div>
 
-	<% include _footer %>
+  <% include _footer %>
   </body>
 </html>
